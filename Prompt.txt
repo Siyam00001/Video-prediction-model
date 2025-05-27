@@ -1,0 +1,44 @@
+Basically i want to build the Transformer-based architecture that learns to predict future video frames given a sequence of past frames. By using patch embeddings and attention mechanisms (basically inspired from transformers model). 
+
+
+
+Dataset Overview & Preprocessing
+
+Structure
+  The dataset is organized hierarchically:
+
+  preprocessed_dir/
+    └── split/ (train/val/test)
+         └── action_class/
+              └── video_id/
+                   └── frames.npy
+  
+
+ The frames.npy file that i have contains video clip showing the sequence of grayscale image frames of size 64x64.
+
+i want you to preprocess my data in such way that it must have:
+  i. resize all videos to  64x64 and converted to grayscale so that i can reduce computation cost
+  ii. Store all frames in such way that it store the information of total numbers of frames 
+  iii. also perform normalization step e.g. /255
+
+
+
+i want to implement a transformers model for that which have the architecture in such way that:
+
+This model have Transformer blocks with patch-level embeddings.
+Patch Embedding must perform the following:
+i. patches never overlaps
+ii. each patch is in the end must be 1d array
+
+in transformers one of the important part is positional embeddings so that the spatial dependency. Use the positional embeddings for that.
+
+Transformer Layers(encoder part)
+Must implement the:
+
+  Multi-Head Self-Attention 
+  Feedforward Network to transform embeddings.
+  Residual Connection and Layer Normalization improve gradient flow and convergence.
+
+Frame Decoder must generate future frames that maps linear projection maps the final patch embeddings back to pixel space and rearrange reshapes the flat patches into  full-frame outputs.
+
+also don't forget to implement the loss function, checkpoints after some chunks of epochs, give the evalution metrics which suits best for the project like mse, psnr and ssim
