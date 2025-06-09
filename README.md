@@ -89,10 +89,5 @@ streamlit run app.py
 ## **Contributors**
 👨‍💻 **Siyam Haider** – FAST, NUCES Islamabad, Pakistan  
 
-## **License**
-This project is licensed under the **MIT License**.
 
----
-
-Let me know if you'd like any modifications! 🚀😃
 
