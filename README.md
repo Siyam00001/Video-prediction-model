@@ -46,9 +46,7 @@ By learning motion patterns, this model supports applications in **video synthes
 
 ## **Installation**
 1️⃣ Clone this repository:  
-```bash
-git clone https://github.com/your-username/video-prediction.git
-```
+
 2️⃣ Install dependencies:  
 ```bash
 pip install -r requirements.txt
